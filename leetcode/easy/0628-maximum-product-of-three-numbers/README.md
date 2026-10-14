@@ -50,22 +50,18 @@ The only three numbers are -1, -2, and -3, so the maximum product is `(-1)  *(-2
 ## Solution
 
 **Language:** Java  
-**Runtime:** 43 ms (beats 7.73%)  
-**Memory:** 47.4 MB (beats 76.33%)  
-**Submitted:** 2026-10-13T15:23:06.588Z  
+**Runtime:** 16 ms (beats 32.38%)  
+**Memory:** 47.7 MB (beats 70.83%)  
+**Submitted:** 2026-10-14T09:28:37.259Z  
 
 ```java
 class Solution {
     public int maximumProduct(int[] nums) {
-        ArrayList<Integer> result = new ArrayList<>();
-        for(int num : nums){
-            result.add(num);
-        }
-        Collections.sort(result);
-        int n=result.size();
-        int max1=result.get(n-1)*result.get(n-2)*result.get(n-3);
-        int max2 = result.get(0)*result.get(1)*result.get(n-1);
-        return Math.max(max1, max2);
+            int n = nums.length;
+            Arrays.sort(nums);
+            int max = nums[n-1]*nums[n-2]*nums[n-3];
+            int max2= nums[0]*nums[1]*nums[n-1];       
+            return Math.max(max,max2);
     }
 }
 ```
