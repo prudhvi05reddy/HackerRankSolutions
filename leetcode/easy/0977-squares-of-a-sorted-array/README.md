@@ -41,22 +41,25 @@ Output: [4,9,9,49,121]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 11 ms (beats 8.90%)  
-**Memory:** 48.3 MB (beats 15.29%)  
-**Submitted:** 2026-10-14T16:11:43.700Z  
+**Runtime:** 10 ms (beats 33.24%)  
+**Memory:** 48.6 MB (beats 12.64%)  
+**Submitted:** 2026-10-16T05:30:19.515Z  
 
 ```java
 class Solution {
     public int[] sortedSquares(int[] nums) {
-        int n=nums.length;
-        int [] result = new int[n];
-        for(int i=0;i<nums.length;i++){
-            result[i] = nums[i]*nums[i];
-        }
-        Arrays.sort(result);
-         return result;
+    int n= nums.length;
+     int[] arr = new int[n];
+    for(int i=0;i<n;i++){
+        arr[i] = nums[i] * nums[i];
+
+    }
+    Arrays.sort(arr);
+        return arr;
     }
 }
+
+
 ```
 
 ---
