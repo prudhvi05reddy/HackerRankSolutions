@@ -52,15 +52,23 @@ The index where nums[i] == 5 is 4.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 5 ms (beats 71.84%)  
-**Memory:** 49.5 MB (beats 19.89%)  
-**Submitted:** 2026-10-19T11:02:47.229Z  
+**Runtime:** 4 ms (beats 75.48%)  
+**Memory:** 44.3 MB (beats 96.72%)  
+**Submitted:** 2026-10-19T11:07:54.004Z  
 
 ```java
 class Solution {
     public List<Integer> targetIndices(int[] nums, int target) {
-        Arrays.sort(nums);
-
+        // Arrays.sort(nums);
+        for(int i=0;i<nums.length;i++){
+            for(int j=i+1;j<nums.length;j++){
+                if(nums[i]>nums[j]){
+                int temp=nums[i];
+                nums[i]=nums[j];
+                nums[j]=temp;
+                }
+            }
+        }
         List <Integer> result = new ArrayList<>();
         for(int i=0;i<nums.length;i++){
             if(nums[i] == target){
