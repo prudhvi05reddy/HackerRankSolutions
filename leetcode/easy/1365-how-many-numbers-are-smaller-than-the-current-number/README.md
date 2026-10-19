@@ -50,15 +50,15 @@ Output: [0,0,0,0]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 11 ms (beats 5.64%)  
-**Memory:** 44.9 MB (beats 98.78%)  
-**Submitted:** 2026-10-19T12:42:55.805Z  
+**Runtime:** 10 ms (beats 14.49%)  
+**Memory:** 45.1 MB (beats 93.53%)  
+**Submitted:** 2026-10-19T12:52:00.003Z  
 
 ```java
 class Solution {
     public int[] smallerNumbersThanCurrent(int[] nums) {
     
-        int a=0;
+    
        int[] result =new int[nums.length];
         for(int i=0;i<nums.length;i++){
              int count=0;
@@ -69,10 +69,13 @@ class Solution {
             }
             result[i]=count;
         }
-        return result;
-
+        // Arrays.sort(nums);
+        // for(int i=0;i<nums.length;i++){
+        //     result[i] = nums.length - nums[i];
+        // }
+         return result;
     }
-}
+    }
 ```
 
 ---
