@@ -1,7 +1,7 @@
 class Solution {
     public int[] smallerNumbersThanCurrent(int[] nums) {
     
-        int a=0;
+    
        int[] result =new int[nums.length];
         for(int i=0;i<nums.length;i++){
              int count=0;
@@ -12,7 +12,10 @@ class Solution {
             }
             result[i]=count;
         }
-        return result;
-
+        // Arrays.sort(nums);
+        // for(int i=0;i<nums.length;i++){
+        //     result[i] = nums.length - nums[i];
+        // }
+         return result;
     }
-}
+    }
