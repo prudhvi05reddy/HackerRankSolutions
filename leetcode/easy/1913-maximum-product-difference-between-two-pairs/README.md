@@ -44,15 +44,14 @@ The product difference is (9  *8) - (2*  4) = 64.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms  
-**Memory:** 41.9 MB  
-**Submitted:** 2026-10-30T15:17:52.477Z  
+**Runtime:** 11 ms (beats 28.18%)  
+**Memory:** 47.4 MB (beats 43.64%)  
+**Submitted:** 2026-10-30T15:18:54.766Z  
 
 ```java
 class Solution {
     public int maxProductDifference(int[] nums) {
         Arrays.sort(nums);
-        HashSet
         return ( nums[nums.length-1] * nums[nums.length-2] ) - (nums[0] * nums[1]) ;
     }
 }
