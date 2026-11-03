@@ -9,10 +9,10 @@ class Solution {
         int ans = 0;
         int ans1 = 0;
         for(int i = 0; i<nums.length; i++){
-            ans += max - nums[i];
-            // ans1 = ans1 + ans;
+            ans = max - nums[i];
+            ans1 = ans1 + ans;
         }
-        return ans;
+        return ans1;
     }
 
 }
